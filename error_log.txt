@@ -1,0 +1,17 @@
+[11-Nov-2024 19:41:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'u853445682_vahsa.reasons_for_partial_or_nonpayment' doesn't exist in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php:53
+Stack trace:
+#0 /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php(53): mysqli->query()
+#1 {main}
+  thrown in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php on line 53
+[11-Nov-2024 19:41:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'u853445682_vahsa.reasons_for_partial_or_nonpayment' doesn't exist in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php:53
+Stack trace:
+#0 /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php(53): mysqli->query()
+#1 {main}
+  thrown in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php on line 53
+[11-Nov-2024 19:41:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'u853445682_vahsa.reasons_for_partial_or_nonpayment' doesn't exist in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php:53
+Stack trace:
+#0 /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php(53): mysqli->query()
+#1 {main}
+  thrown in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php on line 53
+[11-Nov-2024 19:43:48 UTC] PHP Warning:  Undefined variable $partialPaymentResult in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php on line 1131
+[11-Nov-2024 19:43:48 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/u853445682/domains/valueaddedhealthcaresa.com/public_html/clinical.php on line 1131

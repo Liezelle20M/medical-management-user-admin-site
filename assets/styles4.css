@@ -1,0 +1,431 @@
+/* Basic body and layout styles */
+body {
+    background-color: #D3DCE7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content padding */
+main {
+    padding: 50px 20px;
+}
+
+/* Style the required red star */
+.required {
+    color: red;
+    font-weight: lighter;
+}
+
+/* Form section styles */
+.form-section {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Dynamic form and other */
+
+/* Section heading with blue-yellow gradient border */
+.section h3,
+#unique-codes-section h3,
+#partial-payment-section h3,
+#scenario-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #0055A5; /*003366*/
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    width: 38%;
+}
+
+/* Gradient border around the heading */
+.section h3::before,
+#unique-codes-section h3::before,
+#partial-payment-section h3::before,
+#scenario-section h3::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #FFD255, #A0E0FF);
+    z-index: -1;
+    padding: 1px;
+}
+
+/* Form groups */
+.form-group {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #4188FF;
+    text-align: left;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4188FF;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.submit-btn:hover {
+    background-color: #002244;
+}
+
+/* Confirmation message styles */
+.confirmation-message {
+    margin-top: 30px;
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.confirmation-message i {
+    font-size: 20px;
+    color: #28a745;
+}
+
+.payment-link {
+    color: #4188FF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.payment-link:hover {
+    text-decoration: underline;
+}
+
+/* Upload section styles */
+.upload-title {
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+    color: navy;
+}
+
+/* Updated File Name Display Color */
+#file-name-display {
+    color: navy; /* Navy blue color */
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.upload-box {
+    border: 2px dashed #8ca8c3;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: hsl(216, 19%, 95%);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    width: 60%;
+    max-width: 500px;
+    margin-left: 183px;
+}
+
+.upload-section {
+    text-align: center;
+}
+
+/* Specific styling for error messages within the upload section */
+.upload-section .error-message {
+    width: 60%;
+    margin: 10px auto 0;
+    margin-right: 110px;
+    color: #000000;
+    font-size: 0.875rem;
+    padding: 8px;
+    background-color: #fcc5c5;
+    border-left: 4px solid #ff0000;
+    border-radius: 4px;
+    display: none;
+    text-align: center;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust main padding for smaller screens */
+    main {
+        padding: 20px 10px;
+    }
+
+    /* Make section headings full width */
+    .section h3,
+    #unique-codes-section h3,
+    #partial-payment-section h3,
+    #scenario-section h3 {
+        width: 100%;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    /* Adjust form groups to single column */
+    .form-group {
+        display: block;
+        margin-left: 0;
+    }
+
+    /* Make labels full width and add margin */
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    /* Make input, select, and textarea full width */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Adjust upload box for mobile */
+    .upload-box {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    /* Adjust error messages within upload section */
+    .upload-section .error-message {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Adjust the submit button padding and font size */
+    .submit-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Optional: Adjust headings for better readability */
+    h1 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    /* Ensure confirmation messages are centered and responsive */
+    .confirmation-message {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+/* Dynamic Input Fields Styling */
+.dynamic-input-wrapper {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+}
+
+/* Label Styling */
+.dynamic-input-wrapper label {
+    width: 170px; /* Fixed width for labels */
+    font-weight: bold;
+    margin-right: 10px;
+    color: #495057;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Input Field Styling */
+.dynamic-input-wrapper input {
+    flex: 1; /* Take up remaining space */
+    padding: 10px;
+    border: 1px solid #4188FF;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.dynamic-input-wrapper input:focus {
+    outline: none;
+    border-color: #1c658c;
+    box-shadow: 0 0 0 2px rgba(28, 101, 140, 0.2);
+}
+
+/* Remove Button Styling */
+.remove-field-btn {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.remove-field-btn:hover {
+    background-color: #4188FF;
+}
+
+/* Error Message Styling */
+.dynamic-input-wrapper .error-message {
+    display: none; /* Hidden by default */
+    color: #000000;
+    font-size: 0.875rem;
+    padding: 8px;
+    background-color: #fcc5c5;
+    border-left: 4px solid #ff0000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px; /* Space between input row and error message */
+    flex-basis: 100%; /* Ensures the error message spans the full width and appears below */
+}
+
+/* Add More Button Styling */
+.add-more-btn {
+    background-color: #1c658c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.add-more-btn:hover {
+    background-color: #144d6b;
+}
+
+/* Consistent Spacing for Containers */
+#diagnosis-codes-container,
+#procedure-codes-container {
+    margin-bottom: 25px;
+}
+
+/* Mobile Responsive Styles for Dynamic Input Fields */
+@media (max-width: 768px) {
+    /* Adjust Dynamic Input Wrapper to stack vertically */
+    .dynamic-input-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch;   /* Stretch items to fill the container's width */
+        margin-left: 0;         /* Remove left margin for full-width layout */
+    }
+
+    /* Make labels full width and adjust spacing */
+    .dynamic-input-wrapper label {
+        width: 100%;            /* Labels take full width */
+        margin-right: 0;        /* Remove right margin */
+        margin-bottom: 5px;     /* Add space below labels */
+        font-size: 16px;        /* Increase font size for better readability */
+    }
+
+    /* Make input fields full width and adjust spacing */
+    .dynamic-input-wrapper input {
+        width: 100%;            /* Inputs take full width */
+        margin-right: 0;        /* Remove right margin */
+        margin-bottom: 10px;    /* Add space below inputs */
+    }
+
+    /* Style the Remove Button for better accessibility */
+    .remove-field-btn {
+        width: 100%;            /* Buttons take full width */
+        padding: 10px;          /* Increase padding for easier tapping */
+        font-size: 1rem;        /* Increase font size for readability */
+        margin-bottom: 10px;    /* Add space below buttons */
+    }
+
+    /* Style the Add More Button for mobile */
+    .add-more-btn {
+        width: 100%;            /* Button takes full width */
+        padding: 12px 20px;     /* Increase padding for better tap area */
+        font-size: 16px;        /* Increase font size for readability */
+        margin: 15px 0;         /* Adjust margin for spacing */
+    }
+
+    /* Adjust Containers for full-width layout */
+    #diagnosis-codes-container,
+    #procedure-codes-container {
+        margin-left: 0;         
+        margin-right: 0;      
+        padding: 0 10px;        
+    }
+
+    /* Style Error Messages for clarity on mobile */
+    .dynamic-input-wrapper .error-message {
+        width: 100%;            /* Error messages take full width */
+        padding: 10px;          /* Increase padding for better readability */
+        font-size: 0.875rem;    /* Maintain font size */
+        margin-top: 5px;        /* Space between input and error message */
+        box-sizing: border-box; /* Ensure padding is included within width */
+    }
+}
+
+

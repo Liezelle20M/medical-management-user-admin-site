@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAHSA - Payment & Refund Policy</title>
+    <style>
+        :root {
+            --navy-dark: #0B1437;
+            --navy-main: #1E3A8A;
+            --navy-light: #2563EB;
+            --navy-accent: #3B82F6;
+            --navy-hover: #1D4ED8;
+            --navy-shadow: rgba(14, 20, 55, 0.1);
+            --white: #ffffff;
+            --gray-light: #F8FAFC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        }
+
+        body {
+            line-height: 1.7;
+            color: var(--navy-dark);
+            background-color: var(--gray-light);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--navy-dark), var(--navy-main));
+            color: var(--white);
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px var(--navy-shadow);
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .main-content {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px var(--navy-shadow);
+        }
+
+        .policy-section {
+            background: var(--gray-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--navy-main);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--navy-accent);
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .policy-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px var(--navy-shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .policy-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .policy-item h3 {
+            color: var(--navy-main);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .policy-item h3::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--navy-accent);
+            border-radius: 2px;
+        }
+
+        .policy-content {
+            font-size: 1.1rem;
+            color: var(--navy-dark);
+        }
+
+        .refund-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--navy-main), var(--navy-light));
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px var(--navy-shadow);
+        }
+
+        .refund-button:hover {
+            background: linear-gradient(to right, var(--navy-hover), var(--navy-main));
+            transform: translateY(-2px);
+        }
+
+        .contact-section {
+            background: linear-gradient(to right, var(--navy-dark), var(--navy-main));
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            color: var(--white);
+        }
+
+        .contact-section h2 {
+            color: var(--white);
+            border-bottom-color: var(--navy-accent);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--navy-accent);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .main-content {
+                padding: 1.5rem;
+            }
+
+            .policy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Payment & Refund Policy</h1>
+                <p>Value Added Healthcare South Africa (Pty) Ltd</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Payment Terms Section -->
+            <div class="policy-section">
+                <h2 class="section-title">Payment Terms & Policies</h2>
+                <div class="policy-grid">
+                    <div class="policy-item">
+                        <h3>Payment Methods</h3>
+                        <div class="policy-content">
+                            Payment gateways, debit/credit cards, bank transfers, and QR-code payments accepted
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <h3>Processing Time</h3>
+                        <div class="policy-content">
+                            All payments processed within 72 hours of receipt
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <h3>Currency</h3>
+                        <div class="policy-content">
+                            All transactions in South African Rands (ZAR)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Refund Policy Section -->
+            <div class="policy-section">
+                <h2 class="section-title">Refund Terms & Conditions</h2>
+                <div class="policy-grid">
+                    <div class="policy-item">
+                        <h3>Eligibility</h3>
+                        <div class="policy-content">
+                            Eligible for: VAHSA cancellations, client cancellations, payment duplications, and VAHSA errors
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <h3>Process</h3>
+                        <div class="policy-content">
+                            Submit to drmnyandu@outlook.com with invoice number. Processed within 14 days.
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <h3>Refund Amount</h3>
+                        <div class="policy-content">
+                            Up to 75% of the paid amount will be refunded
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation Section -->
+            <div class="policy-section">
+                <h2 class="section-title">Required Documentation</h2>
+                <div class="policy-grid">
+                    <div class="policy-item">
+                        <div class="policy-content">
+                            <ul>
+                                <li>Completed Refund Request Form</li>
+                                <li>Proof of Payment</li>
+                                <li>Supporting Documentation</li>
+                            </ul>
+                           <p>If you wish to request a refund, please contact us directly at <a href="mailto:vahsa_health@outlook.com" class="refund-email">vahsa_health@outlook.com</a>Please make sure to attach the supporting documents when sending us an email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <p>Value Added Healthcare South Africa (Pty) Ltd</p>
+                    </div>
+                    <div class="contact-item">
+                        <p>+27 73 922 1860</p>
+                    </div>
+                    <div class="contact-item">
+                        <p>vahsa_health@outlook.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

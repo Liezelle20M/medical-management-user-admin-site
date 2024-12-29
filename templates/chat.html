@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAHSA Chatbot</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-image: url('static/images/download.png'); /* Add your image URL here */
+    background-size: cover; /* Make the image cover the entire background */
+    background-position: center; /* Center the image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   
+}
+
+ 
+        .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+ 
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* To ensure white icons on dark background */
+}
+        header {
+            background-color: #003f7d;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .register {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid white;
+            border-radius: 4px;
+        }
+
+        .login {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #1c658c;
+            border-radius: 4px;
+        }
+
+        .user-icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        /* Chat container and footer */
+        .chat-container {
+            width: 700px;
+            margin: 100px auto 0; /* Adjust margin to account for fixed header */
+            background: rgb(219, 215, 215);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex-grow: 1;
+        }
+
+        .chat-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 70%;
+            clear: both;
+        }
+
+        .message.user {
+            background-color: #d7f5c1;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .message.bot {
+            background-color: #f1f1f1;
+            text-align: left;
+        }
+
+        .user-input {
+            width: calc(100% - 110px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .send-button {
+            padding: 10px;
+            background-color: black;
+        color: white;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background: 0C4375;
+        }
+
+        footer {
+            background-color:#003f7d;
+            color: white;
+            padding: 40px 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #005FCC;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-column {
+                margin: 20px 0;
+            }
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">VAHSA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#bookings">Bookings</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+             
+            </div>
+        </nav>
+    </header>
+
+    <div class="chat-container">
+        <h2>Welcome to VAHSA Chatbot</h2>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+        <button id="send-button" class="send-button">Send</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>VAHSA</h3>
+                <p>Streamlining healthcare management with advanced, secure technology solutions</p>
+                <div class="social-icons">
+                    <a href="#"><img src="static/images/13266170.png" alt="Facebook"></a>
+                    <a href="#"><img src="static/images/14417460.png" alt="X"></a>
+                    <a href="#"><img src="static/images/1077042.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="chatbot/index.php">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">Privacy & Policy</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="tel:+27739221860">+27 73 922 1860</a></li>
+                    <li><a href="mailto:vahsa_health@outlook.com">vahsa_health@outlook.com</a></li>
+                    <li><p>Midrand</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©2024 VAHSA. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const sendButton = document.getElementById('send-button');
+        const userInput = document.getElementById('user-input');
+        const chatBox = document.getElementById('chat-box');
+
+        function addMessage(sender, message, isUser = false) {
+            const messageClass = isUser ? 'message user' : 'message bot';
+            const messageElement = `<div class="${messageClass}"><strong>${sender}</strong> ${message}</div>`;
+            chatBox.innerHTML += messageElement;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function sendMessage(input) {
+            fetch('/get_response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'user_input=' + encodeURIComponent(input)
+            })
+            .then(response => response.json())
+            .then(data => {
+                addMessage('', data.response);
+            });
+        }
+
+        sendButton.addEventListener('click', () => {
+            const userText = userInput.value;
+            if (userText.trim() !== "") {
+                addMessage('', userText, true);
+                sendMessage(userText);
+                userInput.value = '';
+            }
+        });
+        function handleSend() {
+        const userText = userInput.value;
+        if (userText.trim() !== "") {
+            addMessage('', userText, true);
+            sendMessage(userText);
+            userInput.value = ''; // Clear the input field
+        }
+    }
+
+    // Event listener for the send button
+    sendButton.addEventListener('click', handleSend);
+
+    // Event listener for the Enter key
+    userInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the default "Enter" behavior (form submission)
+            handleSend();
+        }
+    });
+        // Auto greeting message when the page loads
+        window.onload = function() {
+            addMessage('', 'Hello! How can I help you with VAHSA today?');
+        };
+    </script>
+</body>
+</html>

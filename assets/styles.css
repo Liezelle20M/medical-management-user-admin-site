@@ -1,0 +1,370 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+}
+ 
+
+
+
+
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: #dce8f8;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.profile-edit {
+    background-color: hsla(209, 72%, 22%, 0.19);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-left: 280px; /* Adds space between sidebar and main content */
+}
+
+.heading h2 {
+  
+    font-size: 1.5rem;
+    color: #002d62;
+    
+}
+.heading {
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Flex container for name fields */
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between First Name and Last Name fields */
+}
+
+.name-fields .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #002d62;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn-save {
+    background-color: #002d62;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background-color: #ccc;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    float: left; /* Ensures the sidebar stays on the left */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0; /* Remove default padding */
+}
+
+.sidebar li {
+    margin-bottom: 15px; /* Increase space between header links */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold; /* Bold for header links */
+    display: block; /* Ensures full-width clickable area */
+    padding-bottom: 10px; /* Adds padding under header links */
+}
+
+.sidebar .sub-links li {
+    margin-bottom: 10px; /* Add space between sub-links */
+}
+
+.sidebar .sub-links a {
+    color: gray; /* Sub-links gray */
+    font-weight: normal; /* Normal weight for sub-links */
+    padding-left: 35px; /* Indentation for sub-links */
+}
+
+/*contact us page*/
+.info-sub-title {
+    color: black;
+}
+
+#section-wrapper{
+    width: 100%;
+    padding: 10px;
+    padding-top: 100px;
+    background-color: #dce8f8;
+    padding-bottom: 100px;
+
+}
+
+.box-wrapper{
+    position: relative;
+    display: table;
+    width:1100px;
+    margin:auto;
+    margin-top:35px;
+    /*border-radius: 30px;*/
+    overflow: hidden; /* Ensure elements do not overflow NEW NEW*/
+}
+.info-wrap{
+    width:35%;
+    height: 489px;
+    padding-left: 40px;
+    float: left;
+    display: block;
+    /*border-radius: 30px 0px 0px 30px;*/
+    background: white;
+    color: black;
+}
+
+.info-sub-title{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+}
+.info-details {
+    list-style: none;
+    margin: 30px 0px;
+}
+.info-details li {
+    margin-top: 25px;
+    font-size: 20px;
+    color: white;
+}
+.info-details li i {
+    background: #004080;
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.info-details li span {
+    color: black;
+}
+
+.heading-line {
+    border: none; /* Remove default border */
+    height: 2px; /* Thickness of the line */
+    background-color: #002d62; /* Line color */
+    margin: 50px 0; /* Space above and below the line */
+}
+
+.form-wrap{
+    width:65%;
+    float: right;
+    padding: 40px 25px 35px 5px;
+   /* padding:40px 5px 35px 5px;*/
+   /* border-radius: 0px 30px 30px 0px;*/
+    background: white;
+}
+.form-titlee{
+    text-align: left;
+    margin-left: 23px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+.form-fieldss{
+    display: table;
+    width: 100%;
+    padding: 15px 5px 5px 5px;
+}
+.form-fieldss input,
+.form-fieldss textarea{
+    border: none;
+    outline:none;
+    background: none;
+    font-size: 15px;
+    color:#555;
+    padding: 20px 10px 20px 5px;
+    width:100%
+}
+.form-fieldss textarea{
+    height: 100px;
+    resize: none;
+}
+.form-groupp{
+    width: 46%;
+    float: left;
+    padding: 0px 30px;
+    margin: 14px 12px;
+    /*border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;*/
+    color: gray;
+    background: rgb(251, 250, 250);
+}
+.form-fieldss .form-groupp:last-child {
+    width: 96%;
+}
+.submit-button{
+    width: 50%;
+    height: 60px;
+    margin: 0px 12px;
+    margin-left: 323px;
+    /*border-radius: 30px;*/
+    font-size: 15px;;
+    font-weight: 700;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    color:#fff;
+    text-align: center;
+    background: #004080;
+    transition: 0.3s;
+}
+.submit-button:hover{
+    background: #31279d;
+}
+.profile-edit {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.name-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+    .form-group {
+        flex: 1 1 45%;
+    }
+}
+
+/* Buttons should be full width on small screens */
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-cancel, .btn-save {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+}
+
+@media (min-width: 600px) {
+    .form-actions {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .btn-cancel, .btn-save {
+        width: auto;
+    }
+}
+/* General Resets for Box Model */
+* {
+    box-sizing: border-box;
+}
+
+/* Responsive Styles for Contact Us Page */
+@media (max-width: 1100px) {
+    #section-wrapper {
+        padding: 20px; /* Add some padding for smaller screens */
+    }
+
+    .box-wrapper {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 20px; /* Reduce top margin */
+        display: block; /* Allow items to stack */
+    }
+
+    .info-wrap,
+    .form-wrap {
+        width: 100%; /* Make both sections full width */
+        float: none; /* Remove floating */
+        padding: 15px; /* Add padding */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .info-wrap {
+        height: auto; /* Allow height to adjust */
+    }
+
+    .form-groupp {
+        width: 100%; /* Full width for input fields */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        margin-bottom: 14px; /* Add space between input fields */
+    }
+
+    .submit-button {
+        width: 100%; /* Full width for button */
+        margin-left: 0; /* Center button */
+    }
+}
+
+/* Additional Media Queries for Smaller Devices */
+@media (max-width: 600px) {
+    .info-details li {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .info-sub-title {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .form-titlee {
+        font-size: 24px; /* Adjust font size for the form title */
+    }
+
+    .form-fieldss input,
+    .form-fieldss textarea {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .info-details li i {
+        padding: 10px; /* Adjust icon size */
+    }
+}

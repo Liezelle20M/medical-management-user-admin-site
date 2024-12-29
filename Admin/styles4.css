@@ -1,0 +1,169 @@
+/* Basic body and layout styles */
+body {
+    background-color: #D3DCE7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content padding */
+main {
+    padding: 50px 20px;
+}
+
+/* Style the required red star */
+.required {
+    color: red;
+    font-weight: lighter;
+}
+
+/* Form section styles */
+.form-section {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+
+h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Section heading with  blue-yellow gradient border */
+.section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #0055A5;  /*003366*/
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Gradient border around the heading */
+.section h3::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #FFD255, #A0E0FF);
+    z-index: -1;
+    padding: 1px;
+}
+
+/* Form groups */
+.form-group {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #4188FF;
+    text-align: left;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4188FF;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.submit-btn:hover {
+    background-color: #002244;
+}
+
+/* Confirmation message styles */
+.confirmation-message {
+    margin-top: 30px;
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.confirmation-message i {
+    font-size: 20px;
+    color: #28a745;
+}
+
+.payment-link {
+    color: #4188FF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.payment-link:hover {
+    text-decoration: underline;
+}
+
+/* Upload section styles */
+.upload-title {
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-box {
+    border: 2px dashed #8ca8c3;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: hsl(216, 19%, 95%);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    width: 60%;
+    max-width: 500px;
+    margin-left: 183px;
+}
+
+.upload-section {
+    text-align: center;
+}
